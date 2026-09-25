@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Hometown Café & Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- MÀN HÌNH 1: CHÀO MỪNG -->
+    <section class="screen welcome-screen active" id="welcomeScreen">
+      <header class="top-header transparent-header">
+        <div class="brand-logo">
+          <span class="brand-icon">☕</span>
+          <div><strong>MY HOMETOWN</strong><small>Café & Bakery</small></div>
+        </div>
+        <span class="opening-hours">Mở cửa mỗi ngày · 06:00 - 22:00</span>
+      </header>
+      <main class="welcome-layout">
+        <div class="welcome-content">
+          <p class="small-title">HƯƠNG VỊ THÂN QUEN</p>
+          <h1>Góc nhỏ bình yên <em>cho bạn.</em></h1>
+          <p class="welcome-description">
+            Cà phê thơm, bánh mới mỗi ngày và những phút giây chậm rãi dành
+            riêng cho bạn.
+          </p>
+          <button class="primary-button welcome-button" id="btnStart">
+            Bắt đầu đặt món <span>→</span>
+          </button>
+          <div class="welcome-features">
+            <div><strong>8+</strong><span>Món được yêu thích</span></div>
+            <div><strong>10 phút</strong><span>Chuẩn bị nhanh chóng</span></div>
+            <div><strong>Mỗi ngày</strong><span>Bánh luôn tươi mới</span></div>
+          </div>
+        </div>
+        <div class="welcome-gallery">
+          <div class="welcome-main-photo">
+            <img src="./images/ca-phe-sua.jpg" alt="Cà phê sữa" />
+          </div>
+          <div class="welcome-small-photo">
+            <img src="./images/banh-sung-bo.jpg" alt="Bánh sừng bò" />
+          </div>
+          <div class="welcome-review">
+            <span>★★★★★</span><strong>Ấm áp như quê nhà</strong
+            ><small>My Hometown Café & Bakery</small>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- MÀN HÌNH 2: CHỌN HÌNH THỨC -->
+    <section class="screen order-type-screen" id="orderTypeScreen">
+      <header class="top-header">
+        <div class="brand-logo">
+          <span class="brand-icon">☕</span>
+          <div><strong>MY HOMETOWN</strong><small>Café & Bakery</small></div>
+        </div>
+        <div class="step-list">
+          <span class="step active">1</span><i></i><span class="step">2</span
+          ><i></i><span class="step">3</span>
+        </div>
+      </header>
+      <img
+        class="order-decoration matcha-decoration"
+        src="./images/matcha-latte.jpg"
+        alt="Matcha Latte"
+      />
+      <img
+        class="order-decoration tiramisu-decoration"
+        src="./images/tiramisu.jpeg"
+        alt="Bánh Tiramisu"
+      />
+      <main class="order-type-content">
+        <p class="small-title">BƯỚC 1: CHỌN HÌNH THỨC</p>
+        <h2>Bạn muốn dùng món như thế nào?</h2>
+        <p class="section-description">
+          Vui lòng chọn một hình thức để tiếp tục.
+        </p>
+        <div class="order-type-list">
+          <button class="order-type-card" id="btnDineIn">
+            <span class="order-icon">☕</span><strong>Dùng tại quán</strong>
+            <span>Thưởng thức trong không gian ấm áp của chúng tôi</span
+            ><b>Chọn hình thức này →</b>
+          </button>
+          <button class="order-type-card" id="btnTakeAway">
+            <span class="order-icon take-away-icon">🥤</span
+            ><strong>Mang đi</strong>
+            <span>Đóng gói cẩn thận để bạn thuận tiện mang theo</span
+            ><b>Chọn hình thức này →</b>
+          </button>
+        </div>
+        <button class="text-button" id="btnBackWelcome">
+          ← Quay lại trang chào mừng
+        </button>
+      </main>
+    </section>
+
+    <!-- MÀN HÌNH 3: THỰC ĐƠN -->
+    <section class="screen menu-screen" id="menuScreen">
+      <header class="top-header sticky-header">
+        <div class="brand-logo">
+          <span class="brand-icon">☕</span>
+          <div><strong>MY HOMETOWN</strong><small>Café & Bakery</small></div>
+        </div>
+        <div class="header-actions">
+          <span class="order-type-label" id="orderTypeLabel"></span>
+          <button class="cart-button" id="btnOpenCart">
+            🛍 Đơn hàng <b class="cart-count" id="cartCount">0</b>
+          </button>
+        </div>
+      </header>
+      <main class="menu-content">
+        <button class="back-button" id="btnBackOrderType">
+          <span class="back-icon">←</span><span>Quay lại chọn hình thức</span>
+        </button>
+        <div class="menu-intro">
+          <div>
+            <p class="small-title">BƯỚC 2: KHÁM PHÁ THỰC ĐƠN</p>
+            <h2>Hôm nay bạn muốn dùng gì?</h2>
+            <p>
+              Mỗi món đều được chuẩn bị cẩn thận từ những nguyên liệu tươi ngon.
+            </p>
+          </div>
+          <div class="menu-quote">
+            “Một ly cà phê ngon<br />làm ngày mới vui hơn.”
+          </div>
+        </div>
+        <div class="category-list">
+          <button class="category-button active" data-category="all">
+            Tất cả món
+          </button>
+          <button class="category-button" data-category="coffee">
+            ☕ Cà phê
+          </button>
+          <button class="category-button" data-category="non-coffee">
+            🥛 Đồ uống khác
+          </button>
+          <button class="category-button" data-category="bakery">
+            🥐 Bánh ngọt
+          </button>
+        </div>
+        <div class="product-grid" id="productList"></div>
+      </main>
+    </section>
+
+    <!--  CHỌN SIZE VÀ SỐ LƯỢNG -->
+    <div class="modal" id="productModal">
+      <div class="modal-box">
+        <button class="close-button" id="btnCloseModal" aria-label="Đóng">
+          x
+        </button>
+        <div class="modal-product">
+          <div class="modal-image-box">
+            <img id="modalImage" src="" alt="Hình sản phẩm" />
+          </div>
+          <div class="modal-info">
+            <p class="small-title">THÊM VÀO ĐƠN</p>
+            <h2 id="modalName"></h2>
+            <p id="modalDescription"></p>
+            <div class="size-area" id="sizeArea">
+              <h3>Chọn kích cỡ</h3>
+              <div class="size-list">
+                <button class="size-button active" data-size="M">
+                  <b>M</b><span>Vừa</span>
+                </button>
+                <button class="size-button" data-size="L">
+                  <b>L</b><span>+10.000đ</span>
+                </button>
+              </div>
+            </div>
+            <div class="quantity-row">
+              <h3>Số lượng</h3>
+              <div class="quantity-control">
+                <button id="btnDecrease">-</button
+                ><span id="modalQuantity">1</span
+                ><button id="btnIncrease">+</button>
+              </div>
+            </div>
+            <button class="primary-button full-button" id="btnAddToCart">
+              Thêm vào đơn + <span id="modalPrice"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÀN HÌNH 4: GIỎ HÀNG -->
+    <section class="screen cart-screen" id="cartScreen">
+      <header class="top-header">
+        <div class="brand-logo">
+          <span class="brand-icon">☕</span>
+          <div><strong>MY HOMETOWN</strong><small>Café & Bakery</small></div>
+        </div>
+        <span class="order-type-label" id="cartOrderTypeLabel"></span>
+      </header>
+      <main class="cart-content">
+        <div class="cart-title">
+          <p class="small-title">BƯỚC 3: KIỂM TRA ĐƠN HÀNG</p>
+          <h2>Đơn hàng của bạn</h2>
+          <p>Kiểm tra số lượng, kích cỡ và tổng tiền trước khi xác nhận.</p>
+        </div>
+        <div class="cart-layout">
+          <div class="cart-list" id="cartList"></div>
+          <aside class="order-summary">
+            <div class="summary-heading">
+              <span>🧾</span>
+              <h3>Tóm tắt đơn hàng</h3>
+            </div>
+            <div class="summary-row">
+              <span>Tổng số món</span><strong id="summaryQuantity">0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Phí phụ thu</span><strong>0đ</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span>Tổng cộng</span><strong id="summaryTotal">0đ</strong>
+            </div>
+            <p class="summary-message">✓ Giá đã bao gồm thuế</p>
+            <button class="primary-button full-button" id="btnConfirmOrder">
+              Xác nhận đặt món
+            </button>
+            <button class="secondary-button full-button" id="btnBackMenu">
+              ← Chọn thêm món
+            </button>
+          </aside>
+        </div>
+      </main>
+    </section>
+
+    <!-- MÀN HÌNH 5: HOÀN TẤT -->
+    <section class="screen success-screen" id="successScreen">
+      <div class="success-card">
+        <div class="success-icon">✓</div>
+        <p class="small-title">ĐẶT MÓN THÀNH CÔNG</p>
+        <h2>Cảm ơn bạn đã ghé My Hometown!</h2>
+        <p>
+          Món của bạn đang được chuẩn bị. Vui lòng ghi nhớ mã đơn hàng và chờ
+          nhân viên gọi số.
+        </p>
+        <div class="order-number-box">
+          <span>Mã đơn hàng của bạn</span><strong id="orderNumber">A001</strong>
+        </div>
+        <div class="success-information">
+          <div>
+            <span>Hình thức</span><strong id="successOrderType"></strong>
+          </div>
+          <div>
+            <span>Tổng thanh toán</span><strong id="successTotal"></strong>
+          </div>
+        </div>
+        <button class="primary-button" id="btnNewOrder">
+          Tạo đơn hàng mới
+        </button>
+      </div>
+    </section>
+
+    <div class="toast" id="toast">✓ Đã thêm món vào đơn hàng</div>
+    <script src="./index.js"></script>
+  </body>
+</html>
